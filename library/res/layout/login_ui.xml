@@ -1,0 +1,41 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ui_login_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="UselessParent" >
+
+    <ImageView
+        android:id="@+id/ui_login"
+        android:layout_width="250dip"
+        android:layout_height="250dip"
+        android:layout_centerInParent="true"
+        android:contentDescription="@string/login_enter_button"
+        android:minHeight="150dip"
+        android:minWidth="150dip"
+        android:src="@drawable/shape_1" />
+
+    <ImageView
+        android:id="@+id/ui_login_close"
+        android:layout_width="54dip"
+        android:layout_height="54dip"
+        android:layout_centerInParent="true"
+        android:contentDescription="@string/login_close_button"
+        android:src="@drawable/enter_close"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/ui_enter_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:includeFontPadding="true"
+        android:paddingBottom="10dp"
+        android:text="@string/login_enter_button"
+        android:textColor="@android:color/white"
+        android:textColorLink="#00ffffff"
+        android:textSize="70sp"
+        android:visibility="visible" />
+
+</RelativeLayout>

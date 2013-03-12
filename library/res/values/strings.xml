@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="login_enter_button">login</string>
+    <string name="login_close_button">close</string>
+
+</resources>
