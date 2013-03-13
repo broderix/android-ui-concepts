@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2013, Danilov Kirill
+ * Copyright (c) 2013, Danilov Kirill (brody.broderix@gmail.com)
  * All rights reserved.
  * 
  * Redistribution and use in source and binary forms, with or without
@@ -25,7 +25,6 @@
  * The views and conclusions contained in the software and documentation are those
  * of the authors and should not be interpreted as representing official policies, 
  * either expressed or implied, of the FreeBSD Project.
- * @author Danilov Kirill (brody.broderix@gmail.com)
  */
 package com.example.androidtest;
 

@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2013, Danilov Kirill
+ * Copyright (c) 2013, Danilov Kirill (brody.broderix@gmail.com)
  * All rights reserved.
  * 
  * Redistribution and use in source and binary forms, with or without
@@ -25,7 +25,6 @@
  * The views and conclusions contained in the software and documentation are those
  * of the authors and should not be interpreted as representing official policies, 
  * either expressed or implied, of the FreeBSD Project.
- * @author Danilov Kirill (brody.broderix@gmail.com)
  */
 
 package ru.monkeycode.android.ui.login;
@@ -144,7 +143,7 @@ public class LoginUI {
 			view.setOnClickListener(new OnClickListener() {
 				@Override
 				public void onClick(View v) {
-					onEnterButton();
+					doEnterButton();
 					((LoginUIButton) v.getTag()).handle();
 				}
 			});
@@ -169,7 +168,7 @@ public class LoginUI {
 
 	public boolean shouldProcessBack() {
 		if (mButtonEnterPressed) {
-			onEnterButton();
+			doEnterButton();
 			return true;
 		}
 		return false;
@@ -249,25 +248,27 @@ public class LoginUI {
 		mLoginImageView.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				onCloseButton();
+				if (!mButtonEnterPressed) {
+					doCloseButton();
+				}
 			}
 		});
 		mCloseImageView.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				onEnterButton();
+				doEnterButton();
 			}
 		});
 		
 	}
 
-	private void onCloseButton() {
+	private void doCloseButton() {
 		mLoginImageView.startAnimation(mScale1Animation);
 		startAnimationLoginButtons(mFade1Animation);
 		mButtonEnterPressed = true;
 	}
 
-	private void onEnterButton() {
+	private void doEnterButton() {
 		mLoginImageView.startAnimation(mScale2Animation);
 		startAnimationLoginButtons(mFade2Animation);
 		mButtonEnterPressed = false;
